@@ -1,0 +1,58 @@
+Add a New Order
+
+    http://localhost:3000/api/orders
+
+    {
+    "customer_id": 1,
+    "order_date": "2024-06-07",
+    "order_amount": 150.00
+    }
+
+    --Expected Response
+
+    {
+    "message": "Order added successfully",
+    "orderId": 1
+    }
+
+
+ Get Orders by Customer ID
+
+    http://localhost:3000/api/orders/customer/1
+
+
+    --Expected Response:
+
+    [
+    {
+        "id": 1,
+        "customer_id": 1,
+        "order_date": "2024-06-07",
+        "order_amount": 150.00
+    }
+    ]
+
+
+Add a New Customer
+
+    http://localhost:3000/api/customers
+
+    {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "1234567890"
+    }
+
+
+Get Customer by ID
+
+    http://localhost:3000/api/customers/1
+
+    --Expected Response
+
+    {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "1234567890"
+    }
